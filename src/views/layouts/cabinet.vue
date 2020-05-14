@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <h1>hello</h1>
+    </div>
+</template>
+<script>
+    export default {
+        name: "App",
+        data: () => ({
+        }),
+        methods: {},
+        components: {
+        }
+    };
+</script>
+<style scoped lang="scss">
+</style>

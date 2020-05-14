@@ -1,0 +1,28 @@
+@mixin importFont($font, $weight, $path) {
+  @font-face {
+    font-family: $font;
+    font-weight: $weight;
+    src: url($path);
+  }
+}
+
+$fontHeading: 'proximaNova';
+$fontHeadPath: '../fonts/proximaNova/';
+
+//++++++++++++++++++++++++++++++++++ | regular | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 700, $fontHeadPath + 'ProximaNovaBold.otf');
+//++++++++++++++++++++++++++++++++++ | medium | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 400, $fontHeadPath + 'ProximaNovaRegular.otf');
+//++++++++++++++++++++++++++++++++++ | semiBold | ++++++++++++++++++++++++++++++++++
+//@include importFont($fontHeading, 500, $fontHeadPath + 'Montserrat-Medium.ttf');
+//++++++++++++++++++++++++++++++++++ | Bold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontHeading, 600, $fontHeadPath + 'ProximaNovaSemibold.otf');
+
+
+//$fontBase: 'proximaNova';
+//$fontBasePath: '../fonts/proximaNova/';
+//++++++++++++++++++++++++++++++++++ | regular | ++++++++++++++++++++++++++++++++++
+//@include importFont($fontBase, 400, $fontBasePath + 'proximaRegular.otf')
+
+//++++++++++++++++++++++++++++++++++ | semiBold | ++++++++++++++++++++++++++++++++++
+//@include importFont($fontHeading, 600, $fontHeadPath + 'ProximaNova-SemiboldIt.ttf')
